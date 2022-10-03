@@ -46,10 +46,10 @@ class SysExporter(object):
 
             yield gmem
 
-            gdisk_size = GaugeMetricFamily("HDD", 'Disk Size', labels=['Mountpoint'])
-            gdisk_used = GaugeMetricFamily("HDD", 'Disk Used', labels=['Mountpoint'])
-            gdisk_free = GaugeMetricFamily("HDD", 'Disk Free', labels=['Mountpoint'])
-            gdisk_usage_percent = GaugeMetricFamily("HDD", 'Disk Usage %', labels=['Mountpoint'])
+            gdisk_size = GaugeMetricFamily("HDD_Size", 'Disk Size', labels=['Mountpoint'])
+            gdisk_used = GaugeMetricFamily("HDD_Used", 'Disk Used', labels=['Mountpoint'])
+            gdisk_free = GaugeMetricFamily("HDD_Free", 'Disk Free', labels=['Mountpoint'])
+            gdisk_usage_percent = GaugeMetricFamily("HDD_UsedPerc", 'Disk Usage %', labels=['Mountpoint'])
             
             partitions = psutil.disk_partitions()
 
